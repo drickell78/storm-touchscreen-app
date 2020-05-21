@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const { ApolloServer } = require('apollo-server');
+const typeDefs = require('./schema');
+
+const server = new ApolloServer({ typeDefs });
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
